@@ -1,0 +1,27 @@
+class MyOrderList{
+  Node head,tail;
+  MyOrderList(){
+    head=new(null,null);
+    head.next=head;
+  }
+  public void insert(Node newElement){
+    for(Node i=head;;i=i.next){
+         Node j=i.next;
+         if(i.key>j.key){tail=i;break;}
+    }
+    if(newElement.key<head.key){
+      newElement.next=head;
+      head=newElement;tail.next=head;
+    }
+    Node pre=head;
+    else{
+      for(Node i=head.next;i!=head;i=i.next){
+        if(newElement.key<i.key){
+          newElement.next=i;
+          pre.next=newElement;
+          pre=newElement;
+        }
+      }
+    }
+  }
+}
