@@ -1,0 +1,12 @@
+C:\Users\User\source\repos\practicefortest\WebApi.Store\bin\Debug\netcoreapp2.2\WebApi.Store.deps.json
+C:\Users\User\source\repos\practicefortest\WebApi.Store\bin\Debug\netcoreapp2.2\WebApi.Store.dll
+C:\Users\User\source\repos\practicefortest\WebApi.Store\obj\Debug\netcoreapp2.2\WebApi.Store.csprojAssemblyReference.cache
+C:\Users\User\source\repos\practicefortest\WebApi.Store\obj\Debug\netcoreapp2.2\WebApi.Store.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\practicefortest\WebApi.Store\obj\Debug\netcoreapp2.2\WebApi.Store.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\practicefortest\WebApi.Store\obj\Debug\netcoreapp2.2\WebApi.Store.AssemblyInfo.cs
+C:\Users\User\source\repos\practicefortest\WebApi.Store\bin\Debug\netcoreapp2.2\WebApi.Store.pdb
+C:\Users\User\source\repos\practicefortest\WebApi.Store\obj\Debug\netcoreapp2.2\WebApi.Store.dll
+C:\Users\User\source\repos\practicefortest\WebApi.Store\obj\Debug\netcoreapp2.2\WebApi.Store.pdb
+C:\Users\User\source\repos\practicefortest\WebApi.Store\bin\Debug\netcoreapp2.2\WebApi.Core.dll
+C:\Users\User\source\repos\practicefortest\WebApi.Store\bin\Debug\netcoreapp2.2\WebApi.Core.pdb
+C:\Users\User\source\repos\practicefortest\WebApi.Store\obj\Debug\netcoreapp2.2\WebApi.Store.csproj.CopyComplete
