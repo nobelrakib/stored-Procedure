@@ -1,0 +1,9 @@
+C:\Users\User\source\repos\assignment66\Webapi.core\bin\Debug\netcoreapp2.2\WebApi.Core.deps.json
+C:\Users\User\source\repos\assignment66\Webapi.core\bin\Debug\netcoreapp2.2\WebApi.Core.dll
+C:\Users\User\source\repos\assignment66\Webapi.core\bin\Debug\netcoreapp2.2\WebApi.Core.pdb
+C:\Users\User\source\repos\assignment66\Webapi.core\obj\Debug\netcoreapp2.2\WebApi.Core.csprojAssemblyReference.cache
+C:\Users\User\source\repos\assignment66\Webapi.core\obj\Debug\netcoreapp2.2\WebApi.Core.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\assignment66\Webapi.core\obj\Debug\netcoreapp2.2\WebApi.Core.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\assignment66\Webapi.core\obj\Debug\netcoreapp2.2\WebApi.Core.AssemblyInfo.cs
+C:\Users\User\source\repos\assignment66\Webapi.core\obj\Debug\netcoreapp2.2\WebApi.Core.dll
+C:\Users\User\source\repos\assignment66\Webapi.core\obj\Debug\netcoreapp2.2\WebApi.Core.pdb
