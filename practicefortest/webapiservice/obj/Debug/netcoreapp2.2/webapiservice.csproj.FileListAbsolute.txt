@@ -4,7 +4,6 @@ C:\Users\User\source\repos\practicefortest\webapiservice\bin\Debug\netcoreapp2.2
 C:\Users\User\source\repos\practicefortest\webapiservice\bin\Debug\netcoreapp2.2\webapiservice.dll
 C:\Users\User\source\repos\practicefortest\webapiservice\bin\Debug\netcoreapp2.2\webapiservice.pdb
 C:\Users\User\source\repos\practicefortest\webapiservice\obj\Debug\netcoreapp2.2\webapiservice.csprojAssemblyReference.cache
-C:\Users\User\source\repos\practicefortest\webapiservice\obj\Debug\netcoreapp2.2\webapiservice.csproj.CoreCompileInputs.cache
 C:\Users\User\source\repos\practicefortest\webapiservice\obj\Debug\netcoreapp2.2\webapiservice.RazorAssemblyInfo.cache
 C:\Users\User\source\repos\practicefortest\webapiservice\obj\Debug\netcoreapp2.2\webapiservice.RazorAssemblyInfo.cs
 C:\Users\User\source\repos\practicefortest\webapiservice\obj\Debug\netcoreapp2.2\webapiservice.AssemblyInfoInputs.cache
@@ -17,3 +16,6 @@ C:\Users\User\source\repos\practicefortest\webapiservice\bin\Debug\netcoreapp2.2
 C:\Users\User\source\repos\practicefortest\webapiservice\bin\Debug\netcoreapp2.2\WebApi.Core.pdb
 C:\Users\User\source\repos\practicefortest\webapiservice\bin\Debug\netcoreapp2.2\WebApi.Store.pdb
 C:\Users\User\source\repos\practicefortest\webapiservice\obj\Debug\netcoreapp2.2\webapiservice.csproj.CopyComplete
+C:\Users\User\source\repos\practicefortest\webapiservice\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Users\User\source\repos\practicefortest\webapiservice\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\User\source\repos\practicefortest\webapiservice\bin\Debug\netcoreapp2.2\Properties\launchSettings.json

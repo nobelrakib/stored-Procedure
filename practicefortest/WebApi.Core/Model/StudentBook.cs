@@ -6,7 +6,7 @@ namespace WebApi.Core
 {
     public class StudentBook
     {
-        public int StudentBookId { get; set; }
+       // public int StudentBookId { get; set; }
         public int StudentId { get; set;}
         public string bookbarcode { get; set;}
         public Book Book { get; set;}
