@@ -1,0 +1,56 @@
+ ALTER Procedure [dbo].[Stockd]
+@Page			int,
+@size			int,
+ @Company nvarchar(max)=null,
+ @Symbol nvarchar(max)=null,
+ @firstdate nvarchar(max)=null,
+ @lastdate nvarchar(max)=null,
+ @check bit=0,
+ @sort nvarchar(max)
+
+ AS
+BEGIN
+	DECLARE @sql nvarchar(MAX),@flag1 int,@flag2 int
+
+	 set @sql='select '
+	 set @flag1=0
+	 set @flag2=0
+	  if @Company is not null 
+	     set @sql +='Companies.Name  '
+		 if @Company is not null
+		 set @flag1=1
+
+	  if @Symbol is not null and @flag1=1
+	     set @sql +=' ,Companies.Symbol '
+	  if @Symbol is not null and @flag1 =0
+		 set  @sql +=' Companies.Symbol '
+
+	  if @Symbol is not null 
+	     set @flag2=1
+
+	   if @firstdate is not null and @lastdate is not null and (@flag1=1 or @flag2=1)
+	     set @sql +=' ,StockPrices.TradingDay '
+	   else if @firstdate is not null and @lastdate is not null and (@flag1=0 and @flag2=0)
+	    set @sql +=' StockPrices.TradingDay '
+
+      set @sql+='from Companies join StockPrices on Companies.Id=StockPrices.CompanyId where 1=1'
+
+		 if @Company is not null 
+	     set @sql +=' and Companies.Name=@Com  '
+
+	   if @Symbol is not null 
+	     set @sql +=' and Companies.Symbol=@Sym '
+
+	   if @firstdate is not null and @lastdate is not null 
+	     set @sql +=' and   StockPrices.TradingDay>=@fd and StockPrices.TradingDay <=@ld'
+	 
+		 
+		
+		
+	  SET @sql+= ' ORDER BY  '+@sort--+' ASC OFFSET+ @size+ *(+@Page-1+) ROWS FETCH NEXT @size ROWS ONLY'
+
+	 IF @check=0 PRINT(@sql)
+	 
+	  
+EXEC sp_executesql @sql,N' @Com nvarchar(max), @Sym nvarchar(max),@fd nvarchar(max),@ld nvarchar(max)',@com=@Company,@Sym=@Symbol,@fd=@firstdate,@ld=@lastdate
+End
