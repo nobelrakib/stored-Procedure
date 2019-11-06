@@ -1,4 +1,12 @@
- ALTER Procedure [dbo].[Stockd]
+USE [asd]
+GO
+/****** Object:  StoredProcedure [dbo].[Stockd]    Script Date: 11/6/2019 8:15:40 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+  --select Companies join Stockprices on Companies.Id=Stockprices.CompanyId where 1=1
+  ALTER Procedure [dbo].[Stockd]
 @Page			int,
 @size			int,
  @Company nvarchar(max)=null,
@@ -47,10 +55,10 @@ BEGIN
 		 
 		
 		
-	  SET @sql+= ' ORDER BY  '+@sort--+' ASC OFFSET+ @size+ *(+@Page-1+) ROWS FETCH NEXT @size ROWS ONLY'
+	  SET @sql+= ' ORDER BY  '+@sort+' ASC OFFSET @size *(@Page-1) ROWS FETCH NEXT @size ROWS ONLY'
 
 	 IF @check=0 PRINT(@sql)
 	 
 	  
-EXEC sp_executesql @sql,N' @Com nvarchar(max), @Sym nvarchar(max),@fd nvarchar(max),@ld nvarchar(max)',@com=@Company,@Sym=@Symbol,@fd=@firstdate,@ld=@lastdate
+EXEC sp_executesql @sql,N' @Com nvarchar(max), @Sym nvarchar(max),@fd nvarchar(max),@ld nvarchar(max),@Page int,@size int',@com=@Company,@Sym=@Symbol,@fd=@firstdate,@ld=@lastdate,@Page=@Page,@size=@size
 End
