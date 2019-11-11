@@ -1,0 +1,37 @@
+// concatenating strings
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+ int main ()
+{
+ stack<char>stack1;
+ int i=0,j=0,t;
+ cin>>t;
+ string s1="",s2="";
+ string myarr[t];
+ for(i=0;i<t;i++){
+    cin>>myarr[i];
+ }
+ for(i=0;i<t;i++){
+    for(j=0;j<myarr[i].length();j++){
+        if(myarr[i].at(j)>='a' && myarr[i].at(j)<='z'){
+            s1=s1+myarr[i].at(j);
+        }
+        else if((myarr[i].at(j)>='*' && myarr[i].at(j)<='/') || myarr[i].at(j)=='^'){
+            if(myarr[i].at(j+1)=='(' && myarr[i].at(j-1)==')'){
+                stack1.push(myarr[i].at(j));
+            }
+            else s2=s2+myarr[i].at(j);
+        }
+        else if(myarr[i].at(j)==')'){
+            cout<<s1+s2;
+            s1="";
+            s2="";
+        }
+    }
+    for(j=0;j<myarr[i].length();j++){
+            cout<<stack1.top();
+            stack1.pop();
+    }
+ }
+}
