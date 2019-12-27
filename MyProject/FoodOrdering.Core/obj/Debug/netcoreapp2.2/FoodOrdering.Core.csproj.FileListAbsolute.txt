@@ -1,0 +1,11 @@
+C:\Users\User\source\repos\MyProject\FoodOrdering.Core\bin\Debug\netcoreapp2.2\FoodOrdering.Core.deps.json
+C:\Users\User\source\repos\MyProject\FoodOrdering.Core\bin\Debug\netcoreapp2.2\FoodOrdering.Core.dll
+C:\Users\User\source\repos\MyProject\FoodOrdering.Core\bin\Debug\netcoreapp2.2\FoodOrdering.Core.pdb
+C:\Users\User\source\repos\MyProject\FoodOrdering.Core\obj\Debug\netcoreapp2.2\FoodOrdering.Core.csprojAssemblyReference.cache
+C:\Users\User\source\repos\MyProject\FoodOrdering.Core\obj\Debug\netcoreapp2.2\FoodOrdering.Core.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\MyProject\FoodOrdering.Core\obj\Debug\netcoreapp2.2\FoodOrdering.Core.AssemblyInfo.cs
+C:\Users\User\source\repos\MyProject\FoodOrdering.Core\obj\Debug\netcoreapp2.2\FoodOrdering.Core.dll
+C:\Users\User\source\repos\MyProject\FoodOrdering.Core\obj\Debug\netcoreapp2.2\FoodOrdering.Core.pdb
+C:\Users\User\source\repos\MyProject\FoodOrdering.Core\bin\Debug\netcoreapp2.2\FoodOrdering.Data.dll
+C:\Users\User\source\repos\MyProject\FoodOrdering.Core\bin\Debug\netcoreapp2.2\FoodOrdering.Data.pdb
+C:\Users\User\source\repos\MyProject\FoodOrdering.Core\obj\Debug\netcoreapp2.2\FoodOrdering.Core.csproj.CopyComplete
