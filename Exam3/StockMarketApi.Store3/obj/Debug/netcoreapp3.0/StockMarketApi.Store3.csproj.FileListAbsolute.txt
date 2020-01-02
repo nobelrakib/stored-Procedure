@@ -1,5 +1,0 @@
-C:\Users\User\source\repos\Exam3\StockMarketApi.Store3\bin\Debug\netcoreapp3.0\StockMarketApi.Store3.deps.json
-C:\Users\User\source\repos\Exam3\StockMarketApi.Store3\bin\Debug\netcoreapp3.0\StockMarketApi.Store3.dll
-C:\Users\User\source\repos\Exam3\StockMarketApi.Store3\obj\Debug\netcoreapp3.0\StockMarketApi.Store3.csprojAssemblyReference.cache
-C:\Users\User\source\repos\Exam3\StockMarketApi.Store3\obj\Debug\netcoreapp3.0\StockMarketApi.Store3.AssemblyInfoInputs.cache
-C:\Users\User\source\repos\Exam3\StockMarketApi.Store3\obj\Debug\netcoreapp3.0\StockMarketApi.Store3.AssemblyInfo.cs
