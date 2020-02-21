@@ -35,3 +35,17 @@ E:\ppp\finalpractice2\finalpractice2\obj\Debug\netcoreapp2.2\finalpractice2.cspr
 E:\ppp\finalpractice2\finalpractice2\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Dashboard\Index.cshtml.g.cs
 E:\ppp\finalpractice2\finalpractice2\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Shared\_Layout.cshtml.g.cs
 E:\ppp\finalpractice2\finalpractice2\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+E:\ppp\finalpractice2\finalpractice2\bin\Debug\netcoreapp2.2\finalproject2.Core.dll
+E:\ppp\finalpractice2\finalpractice2\bin\Debug\netcoreapp2.2\finalproject2.Data.dll
+E:\ppp\finalpractice2\finalpractice2\bin\Debug\netcoreapp2.2\finalproject2.Core.pdb
+E:\ppp\finalpractice2\finalpractice2\bin\Debug\netcoreapp2.2\finalproject2.Data.pdb
+E:\ppp\finalpractice2\finalpractice2\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Manager\Index.cshtml.g.cs
+E:\ppp\finalpractice2\finalpractice2\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Shared\_Notification.cshtml.g.cs
+E:\ppp\finalpractice2\finalpractice2\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Manager\Add.cshtml.g.cs
+E:\ppp\finalpractice2\finalpractice2\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Manager\Edit.cshtml.g.cs
+E:\ppp\finalpractice2\finalpractice2\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Upload\Index.cshtml.g.cs
+E:\ppp\finalpractice2\finalpractice2\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
+E:\ppp\finalpractice2\finalpractice2\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
+E:\ppp\finalpractice2\finalpractice2\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+E:\ppp\finalpractice2\finalpractice2\obj\Debug\netcoreapp2.2\Razor\Views\Account\Register.cshtml.g.cs
+E:\ppp\finalpractice2\finalpractice2\obj\Debug\netcoreapp2.2\Razor\Views\Account\Login.cshtml.g.cs

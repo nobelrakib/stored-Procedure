@@ -1,0 +1,5 @@
+E:\ppp\finalpractice2\finalproject2.Data\bin\Debug\netcoreapp3.0\finalproject2.Data.deps.json
+E:\ppp\finalpractice2\finalproject2.Data\bin\Debug\netcoreapp3.0\finalproject2.Data.dll
+E:\ppp\finalpractice2\finalproject2.Data\obj\Debug\netcoreapp3.0\finalproject2.Data.csprojAssemblyReference.cache
+E:\ppp\finalpractice2\finalproject2.Data\obj\Debug\netcoreapp3.0\finalproject2.Data.AssemblyInfoInputs.cache
+E:\ppp\finalpractice2\finalproject2.Data\obj\Debug\netcoreapp3.0\finalproject2.Data.AssemblyInfo.cs

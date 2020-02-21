@@ -6,18 +6,42 @@
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Areas\Identity\Pages\Account\Login.cshtml.cs" />
+    <Compile Remove="Areas\Identity\Pages\Account\Register.cshtml.cs" />
+  </ItemGroup>
 
   <ItemGroup>
+    <Content Remove="Areas\Identity\Pages\Account\Login.cshtml" />
+    <Content Remove="Areas\Identity\Pages\Account\Register.cshtml" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="5.1.2" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="AWSSDK.S3" Version="3.3.110.25" />
+    <PackageReference Include="AWSSDK.SQS" Version="3.3.102.66" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
   </ItemGroup>
 
 
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Data\Migrations\" />
+    <Folder Include="Migrations\ApplicationDb\" />
+    <Folder Include="wwwroot\img\" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\finalproject2.Core\finalproject2.Core.csproj" />
+    <ProjectReference Include="..\finalproject2.Data\finalproject2.Data.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,10 @@
+﻿{
+  "profiles": {
+    "ImageUploader": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-        <title>@ViewBag.Title</title>
-    
+
+    <title>@ViewBag.Title</title>
+
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font Awesome -->
@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="/Admin/plugins/summernote/summernote-bs4.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    @RenderSection("styles", false)
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
@@ -268,30 +269,30 @@
                             </ul>
                         </li>
                         <li class="nav-item has-treeview">
-                            <a href="#" class="nav-link">
+                            <a href="" class="nav-link">
                                 <i class="nav-icon fas fa-chart-pie"></i>
                                 <p>
-                                    Charts
+                                    managers
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="pages/charts/chartjs.html" class="nav-link">
+                                    <a href="~/Admin/Manager/Index" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>ChartJS</p>
+                                        <p>view manager</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/charts/flot.html" class="nav-link">
+                                    <a href="~/Admin/Manager/Add" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Flot</p>
+                                        <p>Add manager</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="pages/charts/inline.html" class="nav-link">
+                                    <a href="~/Admin/Upload/Index" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Inline</p>
+                                        <p>upload</p>
                                     </a>
                                 </li>
                             </ul>
@@ -721,7 +722,7 @@
             <!-- /.content-header -->
             <!-- Main content -->
             <section class="content">
-               
+                @RenderSection("notification", false)
                 @RenderBody()
             </section>
             <!-- /.content -->
@@ -774,5 +775,6 @@
     <script src="/Admin/js/pages/dashboard.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="/Admin/js/demo.js"></script>
+    @RenderSection("scripts", false)
 </body>
 </html>

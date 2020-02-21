@@ -1,0 +1,11 @@
+E:\ppp\finalpractice2\finalproject2.Core\bin\Debug\netcoreapp2.2\finalproject2.Core.deps.json
+E:\ppp\finalpractice2\finalproject2.Core\bin\Debug\netcoreapp2.2\finalproject2.Core.dll
+E:\ppp\finalpractice2\finalproject2.Core\bin\Debug\netcoreapp2.2\finalproject2.Core.pdb
+E:\ppp\finalpractice2\finalproject2.Core\obj\Debug\netcoreapp2.2\finalproject2.Core.csprojAssemblyReference.cache
+E:\ppp\finalpractice2\finalproject2.Core\obj\Debug\netcoreapp2.2\finalproject2.Core.AssemblyInfoInputs.cache
+E:\ppp\finalpractice2\finalproject2.Core\obj\Debug\netcoreapp2.2\finalproject2.Core.AssemblyInfo.cs
+E:\ppp\finalpractice2\finalproject2.Core\obj\Debug\netcoreapp2.2\finalproject2.Core.dll
+E:\ppp\finalpractice2\finalproject2.Core\obj\Debug\netcoreapp2.2\finalproject2.Core.pdb
+E:\ppp\finalpractice2\finalproject2.Core\bin\Debug\netcoreapp2.2\finalproject2.Data.dll
+E:\ppp\finalpractice2\finalproject2.Core\bin\Debug\netcoreapp2.2\finalproject2.Data.pdb
+E:\ppp\finalpractice2\finalproject2.Core\obj\Debug\netcoreapp2.2\finalproject2.Core.csproj.CopyComplete
