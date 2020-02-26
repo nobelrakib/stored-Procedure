@@ -1,0 +1,11 @@
+C:\Users\User\source\repos\practice\Ecommerce.Core\bin\Debug\netcoreapp2.2\Ecommerce.Core.deps.json
+C:\Users\User\source\repos\practice\Ecommerce.Core\bin\Debug\netcoreapp2.2\Ecommerce.Core.dll
+C:\Users\User\source\repos\practice\Ecommerce.Core\bin\Debug\netcoreapp2.2\Ecommerce.Core.pdb
+C:\Users\User\source\repos\practice\Ecommerce.Core\obj\Debug\netcoreapp2.2\Ecommerce.Core.csprojAssemblyReference.cache
+C:\Users\User\source\repos\practice\Ecommerce.Core\obj\Debug\netcoreapp2.2\Ecommerce.Core.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\practice\Ecommerce.Core\obj\Debug\netcoreapp2.2\Ecommerce.Core.AssemblyInfo.cs
+C:\Users\User\source\repos\practice\Ecommerce.Core\obj\Debug\netcoreapp2.2\Ecommerce.Core.dll
+C:\Users\User\source\repos\practice\Ecommerce.Core\obj\Debug\netcoreapp2.2\Ecommerce.Core.pdb
+C:\Users\User\source\repos\practice\Ecommerce.Core\bin\Debug\netcoreapp2.2\Ecommerce.Data.dll
+C:\Users\User\source\repos\practice\Ecommerce.Core\bin\Debug\netcoreapp2.2\Ecommerce.Data.pdb
+C:\Users\User\source\repos\practice\Ecommerce.Core\obj\Debug\netcoreapp2.2\Ecommerce.Core.csproj.CopyComplete

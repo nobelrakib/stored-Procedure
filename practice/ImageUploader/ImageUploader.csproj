@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UserSecretsId>dotnet-ImageUploader-9B58FFA9-6B89-4B58-85A0-F204C9641A99</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.3.104.27" />
+    <PackageReference Include="AWSSDK.S3" Version="3.3.110.23" />
+    <PackageReference Include="AWSSDK.SQS" Version="3.3.102.64" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.0.0" />
+  </ItemGroup>
+</Project>

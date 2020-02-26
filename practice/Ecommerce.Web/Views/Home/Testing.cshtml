@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewData["Title"] = "testing";
+}
+@section styles
+ {
+    <!-- DataTables -->
+    <link rel="stylesheet" type="text/css" href="/css/simplepagelayout.css" />
+    <!-- DataTables -->
+    <link rel="stylesheet" href="/admin/plugins/datatables-bs4/css/dataTables.bootstrap4.css">
+}
+
+@section scripts
+{
+    <!-- DataTables -->
+    <script src="/admin/plugins/datatables/jquery.dataTables.js"></script>
+    <script src="/admin/plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
+
+    <script>
+        $(function () {
+            $('#main').DataTable({
+                "processing": true,
+                "serverSide": true,
+                "ajax": "/Admin/Product/GetProduct",
+                "columnDefs": [
+                    {
+                        "orderable": false,
+                        "targets": 0,
+                        "render": function (data, type, row) {
+                            return `<input type='checkbox' value='${data}'/>`;
+                        }
+                    }
+                ]
+            })
+        });
+
+
+    </script>
+}
+
+
+<div id="container">
+    <div id="header">
+        <h1>testing something</h1>
+    </div>
+    <div id="content">
+        <div id="nav">
+            <ul>
+                <li>home</li>
+                <li>address</li>
+                <li>menu</li>
+            </ul>
+        </div>
+        <div id="main">
+            <h2>home page</h2>
+            
+        </div>
+        <div id="thirdsection">
+            <ul>
+                <li>home</li>
+                <li>address</li>
+                <li>menu</li>
+            </ul>
+        </div>
+    </div>
+    <div id="footer">
+        <p>hi this is footer</p>
+    </div>
+
+</div>
