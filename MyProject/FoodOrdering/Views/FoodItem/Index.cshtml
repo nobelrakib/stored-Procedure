@@ -1,0 +1,56 @@
+﻿@model IEnumerable<FoodOrdering.Models.FoodItemModel>
+@{
+    ViewData["Title"] = " Show food";
+}
+<h1>Food Menus</h1>
+
+<div class="container">
+    <div class="row pb-4">
+        <div class="col-12">
+            <input type="text" name="searchbox" id="searchbox" class="filterinput form-control" placeholder="Search recipe titles and tags...">
+        </div>
+    </div>
+</div>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-4" data-role="recipe" >
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">@item.Name</h5>
+                    <p class="card-text">@item.Description</p>
+                    <a asp-route-id="@item.Id" asp-action="edit" asp-controller="FoodItem" asp-area="Admin">order</a>
+                    @{
+                        var parms = new Dictionary<string, string>
+                                        {
+                               { "customerid","1"},
+                               { "fooditemid", @item.Id.ToString()}
+                        };
+                    }
+                    <a asp-route="addorder"
+                       asp-all-route-data="parms">add order</a>
+                </div>
+            </div>
+        </div>
+
+    }
+</div>
+
+@section scripts
+{
+    
+    <script>
+      $(document).ready(function() {
+        $("#searchbox").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $('div[data-role="recipe"]').filter(function() {
+            $(this).toggle($(this).find('h5').text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    }); 
+    </script>
+    
+}
+
+
+

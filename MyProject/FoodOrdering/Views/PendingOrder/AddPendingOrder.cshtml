@@ -1,0 +1,9 @@
+﻿@model FoodOrdering.Models.PendingOrderUpdateModel
+@{
+    ViewData["Title"] = "Add Order";
+}
+
+@section notification
+{
+    @await Html.PartialAsync("_Notification", Model.Notification)
+}

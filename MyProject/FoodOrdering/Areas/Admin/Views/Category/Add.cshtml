@@ -1,0 +1,63 @@
+﻿@model FoodOrdering.Areas.Admin.Models.CategoryUpdateModel
+@{
+    ViewData["Title"] = "Add Category";
+}
+
+@section notification
+{
+    @await Html.PartialAsync("_Notification", Model.Notification)
+}
+<div class="container-fluid">
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-6">
+            <!-- general form elements -->
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Quick Example</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form role="form" action="~/admin/category/add" method="post">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="categoryname">Give category name</label>
+                            <input type="text" class="form-control" name="Name" id="categoryname" placeholder="category name">
+                        </div>
+                        <div class="form-group">
+                            <label for="categoryname2">select products</label>
+
+                            @Html.ListBoxFor(model => model.FoodItemIds, new MultiSelectList(Model.FoodList, "Id", "Name"), new { id = "multiSelectDropDown", multiple = "multiple" })
+
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--/.col (left) -->
+
+    </div>
+    <!-- /.row -->
+</div><!-- /.container-fluid -->
+@section scripts{
+
+    <script>
+        $(function () {
+            //normal dropdown
+            //$("#normalDropDown").chosen({
+            //    disable_search_threshold : 5
+            //});
+
+
+            $("#multiSelectDropDown").chosen({
+                width : "20%"
+            });
+        });
+
+    </script>
+}

@@ -1,0 +1,44 @@
+﻿@model FoodOrdering.Areas.Admin.Models.FoodItemUpdateModel
+@{
+    ViewData["Title"] = "Add FoodItem";
+}
+
+@section notification
+{
+    @await Html.PartialAsync("_Notification", Model.Notification)
+}
+<div class="container-fluid">
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-6">
+            <!-- general form elements -->
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Quick Example</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form role="form" action="~/admin/FoodItem/add" method="post">
+                    <div class="card-body">
+                        <label for="Foodname">Give food name</label>
+                        <input type="text" class="form-control" name="Name" id="Foodname" placeholder="food name">
+                        <label for="CategoryName">Give food price</label>
+                        <input type="text" class="form-control" name="Price" id="CategoryName" placeholder="Category name">
+                        <label for="fooddescription">Give food description</label>
+                        <input type="text" class="form-control" name="Description" id="fooddescription" placeholder="foodprice name">
+                    
+
+                    </div>
+                    <!-- /.card-body -->
+
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--/.col (left) -->
+
+    </div>
+    <!-- /.row -->
+</div><!-- /.container-fluid -->

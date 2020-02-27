@@ -1,0 +1,7 @@
+C:\Users\User\source\repos\MyProject\FoodOrdering.Data\bin\Debug\netcoreapp2.2\FoodOrdering.Data.deps.json
+C:\Users\User\source\repos\MyProject\FoodOrdering.Data\bin\Debug\netcoreapp2.2\FoodOrdering.Data.dll
+C:\Users\User\source\repos\MyProject\FoodOrdering.Data\bin\Debug\netcoreapp2.2\FoodOrdering.Data.pdb
+C:\Users\User\source\repos\MyProject\FoodOrdering.Data\obj\Debug\netcoreapp2.2\FoodOrdering.Data.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\MyProject\FoodOrdering.Data\obj\Debug\netcoreapp2.2\FoodOrdering.Data.AssemblyInfo.cs
+C:\Users\User\source\repos\MyProject\FoodOrdering.Data\obj\Debug\netcoreapp2.2\FoodOrdering.Data.dll
+C:\Users\User\source\repos\MyProject\FoodOrdering.Data\obj\Debug\netcoreapp2.2\FoodOrdering.Data.pdb

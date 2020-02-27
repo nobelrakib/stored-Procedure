@@ -1,0 +1,23 @@
+﻿
+@model FoodOrdering.Models.PaymentModel
+@{ 
+     ViewData["Title"] = "Payments";
+}
+    <form asp-controller="Payment" asp-action="Addpayment" method="post" class="form-horizontal">
+        <h1>Pay here</h1>
+        <hr />
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="CardNumber" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="CardNumber" class="form-control" />
+                <span asp-validation-for="CardNumber" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-10">
+                <input type="submit" class="btn btn-default" value="Submit" />
+            </div>
+        </div>
+        
+    </form>
