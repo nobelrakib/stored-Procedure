@@ -59,5 +59,9 @@ namespace FoodOrdering.Core.Services
         {
             return _storeUnitOfWork.CategoryRepository.SearchByCategoryName(name);
         }
+        public IList<Category> GetCategoryList()
+        {
+            return _storeUnitOfWork.CategoryRepository.GetCategoryList();
+        }
     }
 }

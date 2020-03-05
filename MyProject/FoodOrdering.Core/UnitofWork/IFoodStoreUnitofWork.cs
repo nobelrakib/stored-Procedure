@@ -11,12 +11,12 @@ namespace FoodOrdering.Core.UnitofWork
     {
        ICategoryRepository CategoryRepository { get; set; }
        IFoodItemRepository FoodItemRepository { get; set; }
-       IFoodItemCategoryRepository FoodItemCategoryRepository { get; set; }
+       IImageRepository ImageRepository { get; set; }
+       IDeliveryBoyRepository DeliveryBoyRepository { get; set; }
        IFixedAmountDiscountRepository FixedAmountDiscountRepository { get; set; }
        IPercentageAmountDiscount PercentageAmountDiscountRepository { get; set; }
        IConfirmedOrderRepository ConfirmedOrderRepository { get; set; }
        IPendingOrderRepository PendingOrderRepository { get; set; }
-       ICustomerRepository CustomerRepository { get; set; }
        IOffLinePaymentRepository OfflinePaymentRepository { get; set; }
        IOnlinePaymentRepository OnlinePaymentReposittory { get; set; }
     }

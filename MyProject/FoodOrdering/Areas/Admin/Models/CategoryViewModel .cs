@@ -43,7 +43,8 @@ namespace FoodOrdering.Areas.Admin.Models
                         {
                                 record.Id.ToString(),
                                 record.Name,
-                                record.Id.ToString(),
+                                record.Id.ToString()
+                                
                         }
                     ).ToArray()
 

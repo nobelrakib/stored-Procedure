@@ -26,24 +26,7 @@ namespace FoodOrdering.Areas.Admin.Controllers
             return View(model);
         }
 
-        public IActionResult Add()
-        {
-            var model = new FixedAmountDiscountUpdateModel();
-            model.ListofFood();
-            return View(model);
-        }
-
-        [HttpPost]
-        //[ValidateAntiForgeryToken]
-        public IActionResult Add(FixedAmountDiscountUpdateModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                model.AddNewFixedAmount();
-                model.ListofFood();
-            }
-            return View(model);
-        }
+       
 
         public IActionResult GetAmounts()
         {
@@ -53,12 +36,12 @@ namespace FoodOrdering.Areas.Admin.Controllers
             return Json(data);
         }
 
-        public IActionResult Edit(int id)
-        {
-            var model = new FixedAmountDiscountUpdateModel();
-            model.Load(id);
-            return View(model);
-        }
+        //public IActionResult Edit(int id)
+        //{
+        //    var model = new FixedAMountDiscountUpdateModel();
+        //    model.Load(id);
+        //    return View(model);
+        //}
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -69,15 +52,15 @@ namespace FoodOrdering.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Edit(FixedAmountDiscountUpdateModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                model.EditFixedAmount();
-            }
-            return View(model);
-        }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public IActionResult Edit(FixedAmountDiscountUpdateModel model)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        model.EditFixedAmount();
+        //    }
+        //    return View(model);
+        //}
     }
 }

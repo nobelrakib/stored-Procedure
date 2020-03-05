@@ -10,5 +10,8 @@ namespace FoodOrdering.Core.Entities
        //public  DateTime Date { get; set; }
        //public Customer Customer { get; set; }
        //public int CustomerId { get; set; }
+       public string UserId { get; set; }
+     //  public DeliveryBoy DeliveryBoy { get; set; }
+       public ExtendedIdentityUser User { get; set; }
     }
 }

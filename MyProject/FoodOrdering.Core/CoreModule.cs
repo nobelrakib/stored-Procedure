@@ -48,10 +48,7 @@ namespace FoodOrdering.Core
                 .InstancePerLifetimeScope();
             builder.RegisterType<FoodItemService>().As<IFoodItemService>()
                 .InstancePerLifetimeScope();
-            builder.RegisterType<FoodItemCategoryRepository>().As<IFoodItemCategoryRepository>()
-               .InstancePerLifetimeScope();
-            builder.RegisterType<FoodItemCategoryService>().As<IFoodItemCategoryService>()
-                .InstancePerLifetimeScope();
+            
             builder.RegisterType<FixedAmountDiscountRepository>().As<IFixedAmountDiscountRepository>()
               .InstancePerLifetimeScope();
             builder.RegisterType<FixedAmountDiscountService>().As<IFixedAmountDiscountService>()
@@ -68,16 +65,23 @@ namespace FoodOrdering.Core
                .InstancePerLifetimeScope();
             builder.RegisterType<ConfirmedOrderRepository>().As<IConfirmedOrderRepository>()
                .InstancePerLifetimeScope();
-            builder.RegisterType<CustomerRepository>().As<ICustomerRepository>()
-               .InstancePerLifetimeScope();
-            builder.RegisterType<CustomerService>().As<ICustomerService>()
-               .InstancePerLifetimeScope();
+            
             builder.RegisterType<PaymentService>().As<IPaymentService>()
                .InstancePerLifetimeScope();
             builder.RegisterType<OnlinePaymentRepository>().As<IOnlinePaymentRepository>()
                .InstancePerLifetimeScope();
             builder.RegisterType<OffLinePaymentRepository>().As<IOffLinePaymentRepository>()
                .InstancePerLifetimeScope();
+            builder.RegisterType<DeliveryBoyRepository>().As<IDeliveryBoyRepository>()
+               .InstancePerLifetimeScope();
+            builder.RegisterType<DeliveryService>().As<IDeliveryService>()
+               .InstancePerLifetimeScope();
+
+            builder.RegisterType<ImageRepository>().As<IImageRepository>()
+               .InstancePerLifetimeScope();
+            builder.RegisterType<ImageService>().As<IImageService>()
+               .InstancePerLifetimeScope();
+
             base.Load(builder);
         }
     }

@@ -24,12 +24,12 @@
                             <label for="categoryname">Give category name</label>
                             <input type="text" class="form-control" name="Name" id="categoryname" placeholder="category name">
                         </div>
-                        <div class="form-group">
+                        @*<div class="form-group">
                             <label for="categoryname2">select products</label>
 
-                            @Html.ListBoxFor(model => model.FoodItemIds, new MultiSelectList(Model.FoodList, "Id", "Name"), new { id = "multiSelectDropDown", multiple = "multiple" })
+                            @Html.ListBoxFor(model => model.FoodItemIds, new MultiSelectList(Model.FoodList, "Id", "Name"), new { id = "normalDropDown" })
 
-                        </div>
+                        </div>*@
                     </div>
                     <!-- /.card-body -->
 
@@ -48,10 +48,10 @@
 
     <script>
         $(function () {
-            //normal dropdown
-            //$("#normalDropDown").chosen({
-            //    disable_search_threshold : 5
-            //});
+            
+            $("#normalDropDown").chosen({
+                disable_search_threshold : 5
+            });
 
 
             $("#multiSelectDropDown").chosen({

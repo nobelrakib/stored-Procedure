@@ -13,7 +13,7 @@ namespace FoodOrdering.Areas.Admin.Models
     public class FoodItemViewModel : BaseModel
     {
         private IFoodItemService _fooditemService;
-
+        public static int Id { get; set; }
         public FoodItemViewModel()
         {
             _fooditemService = Startup.AutofacContainer.Resolve<IFoodItemService>();
@@ -23,7 +23,17 @@ namespace FoodOrdering.Areas.Admin.Models
         {
             _fooditemService = fooditemService;
         }
+        public int InitializeId(int id)
+        {
+            Id = id;
+            return Id;
+        }
 
+
+        public int GetId()
+        {
+            return Id;
+        }
 
         public object GetFooditems(DataTablesAjaxRequestModel tableModel)
         {
@@ -48,6 +58,37 @@ namespace FoodOrdering.Areas.Admin.Models
                                 record.Description,
                                 record.Price.ToString(),
                                 record.Id.ToString()
+                                
+                        }
+                    ).ToArray()
+
+            };
+        }
+
+        public object GetParticularFooditems(DataTablesAjaxRequestModel tableModel,int categoryid)
+        {
+            int total = 0;
+            int totalFiltered = 0;
+            var records = _fooditemService.GetProductByCategoryId(
+                categoryid,
+                tableModel.PageIndex,
+                tableModel.PageSize,
+                tableModel.SearchText,
+                out total,
+                out totalFiltered);
+
+            return new
+            {
+                recordsTotal = total,
+                recordsFiltered = totalFiltered,
+                data = (from record in records
+                        select new string[]
+                        {
+                                record.Id.ToString(),
+                                record.Name,
+                                record.Description,
+                                record.Price.ToString(),
+                                
                         }
                     ).ToArray()
 

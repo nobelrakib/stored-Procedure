@@ -41,6 +41,25 @@ namespace FoodOrdering.Core.Services
                 pageSize,
                 true);
         }
+
+        public IEnumerable<FoodItem> GetProductByCategoryId(
+           int categoryid,
+           int pageIndex,
+           int pageSize,
+           string searchText,
+           out int total,
+           out int totalFiltered)
+        {
+            return _storeUnitOfWork.FoodItemRepository.Get(
+                out total,
+                out totalFiltered,
+                x => x.Name.Contains(searchText) && x.CategoryId==categoryid,
+                null,
+                "",
+                pageIndex,
+                pageSize,
+                true);
+        }
         public void DeleteFoodItem(int id)
         {
             _storeUnitOfWork.FoodItemRepository.Remove(id);

@@ -32,18 +32,14 @@
                     },
                      {
                         "orderable": false,
-                        "targets": 2,
+                        "targets": 3,
                         "render": function (data, type, row) {
-                            return `<button type="submit" class="btn btn-info btn-sm" onclick="window.location.href='/admin/FixedAmountDiscount/edit/${data}'" value='${data}'>
-                                    <i class="fas fa-pencil-alt">
-                                    </i>
-                                    Edit
-                                </button>
-                                <button type="submit" class="btn btn-danger btn-sm show-bs-modal" href="#" data-id='${data}' value='${data}'>
+                            return `<button type="submit" class="btn btn-danger btn-sm show-bs-modal" href="#" data-id='${data}' value='${data}'>
                                     <i class="fas fa-trash">
                                     </i>
                                     Delete
                                 </button>`;
+                                
                         }
                     }
                 ]
@@ -86,6 +82,7 @@
                         <tr>
                             <th><input type="checkbox" /></th>
                             <th>amount</th>
+                            <th>FoodItemName</th>
                             <th>Action</th>
                         </tr>
                     </thead>

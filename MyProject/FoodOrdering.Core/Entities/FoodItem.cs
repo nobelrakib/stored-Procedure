@@ -11,9 +11,10 @@ namespace FoodOrdering.Core.Entities
         public string Description { get; set; }
         public double Price { get; set; }
         public IList<FoodImage> Images { get; set; }
-        public IList<FoodItemCategory> Categories { get; set; }
+        public Category Categories { get; set; }
         public Discount PriceDiscount { get; set; }
         public IList<Order> Orders { get; set; }
+        public int CategoryId { get; set; }
        // public ConfirmedOrder ConfirmedOrder { get; set; }
     }
 }

@@ -11,7 +11,7 @@ namespace FoodOrdering.Core.Entities
         private  double _amount;
         public double Amount
         {
-            get { return 0; }
+            get { return _amount; }
             set
             {
                 if (value >= 0)

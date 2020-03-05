@@ -32,7 +32,7 @@ namespace FoodOrdering.Migrations
                     b.ToTable("Category");
                 });
 
-            modelBuilder.Entity("FoodOrdering.Core.Entities.Customer", b =>
+            modelBuilder.Entity("FoodOrdering.Core.Entities.DeliveryBoy", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -42,11 +42,9 @@ namespace FoodOrdering.Migrations
 
                     b.Property<string>("Name");
 
-                    b.Property<string>("Password");
-
                     b.HasKey("Id");
 
-                    b.ToTable("Customer");
+                    b.ToTable("DeliveryBoys");
                 });
 
             modelBuilder.Entity("FoodOrdering.Core.Entities.Discount", b =>
@@ -80,7 +78,7 @@ namespace FoodOrdering.Migrations
 
                     b.Property<string>("AlternativeText");
 
-                    b.Property<int?>("FoodItemId");
+                    b.Property<int>("FoodItemId");
 
                     b.Property<string>("Url");
 
@@ -97,6 +95,8 @@ namespace FoodOrdering.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("CategoryId");
+
                     b.Property<string>("Description");
 
                     b.Property<string>("Name");
@@ -105,24 +105,9 @@ namespace FoodOrdering.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("FoodItems");
-                });
-
-            modelBuilder.Entity("FoodOrdering.Core.Entities.FoodItemCategory", b =>
-                {
-                    b.Property<int>("FoodItemId");
-
-                    b.Property<int>("CategoryId");
-
-                    b.Property<string>("CategoryName");
-
-                    b.Property<string>("Foodname");
-
-                    b.HasKey("FoodItemId", "CategoryId");
-
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("FoodItemCategory");
+                    b.ToTable("FoodItems");
                 });
 
             modelBuilder.Entity("FoodOrdering.Core.Entities.OffLinePayment", b =>
@@ -176,13 +161,177 @@ namespace FoodOrdering.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CustomerId");
-
                     b.HasIndex("FoodItemId");
 
                     b.ToTable("Order");
 
                     b.HasDiscriminator<string>("Discriminator").HasValue("Order");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
+                {
+                    b.Property<string>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken();
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(256);
+
+                    b.Property<string>("NormalizedName")
+                        .HasMaxLength(256);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedName")
+                        .IsUnique()
+                        .HasName("RoleNameIndex")
+                        .HasFilter("[NormalizedName] IS NOT NULL");
+
+                    b.ToTable("AspNetRoles");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ClaimType");
+
+                    b.Property<string>("ClaimValue");
+
+                    b.Property<string>("RoleId")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetRoleClaims");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUser", b =>
+                {
+                    b.Property<string>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("AccessFailedCount");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken();
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired();
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(256);
+
+                    b.Property<bool>("EmailConfirmed");
+
+                    b.Property<bool>("LockoutEnabled");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasMaxLength(256);
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasMaxLength(256);
+
+                    b.Property<string>("PasswordHash");
+
+                    b.Property<string>("PhoneNumber");
+
+                    b.Property<bool>("PhoneNumberConfirmed");
+
+                    b.Property<string>("SecurityStamp");
+
+                    b.Property<bool>("TwoFactorEnabled");
+
+                    b.Property<string>("UserName")
+                        .HasMaxLength(256);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedEmail")
+                        .HasName("EmailIndex");
+
+                    b.HasIndex("NormalizedUserName")
+                        .IsUnique()
+                        .HasName("UserNameIndex")
+                        .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.ToTable("AspNetUsers");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("IdentityUser");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ClaimType");
+
+                    b.Property<string>("ClaimValue");
+
+                    b.Property<string>("UserId")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserClaims");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
+                {
+                    b.Property<string>("LoginProvider");
+
+                    b.Property<string>("ProviderKey");
+
+                    b.Property<string>("ProviderDisplayName");
+
+                    b.Property<string>("UserId")
+                        .IsRequired();
+
+                    b.HasKey("LoginProvider", "ProviderKey");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserLogins");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
+                {
+                    b.Property<string>("UserId");
+
+                    b.Property<string>("RoleId");
+
+                    b.HasKey("UserId", "RoleId");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetUserRoles");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
+                {
+                    b.Property<string>("UserId");
+
+                    b.Property<string>("LoginProvider");
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("Value");
+
+                    b.HasKey("UserId", "LoginProvider", "Name");
+
+                    b.ToTable("AspNetUserTokens");
                 });
 
             modelBuilder.Entity("FoodOrdering.Core.Entities.FixedAmountDiscount", b =>
@@ -210,7 +359,18 @@ namespace FoodOrdering.Migrations
                 {
                     b.HasBaseType("FoodOrdering.Core.Entities.Order");
 
+                    b.Property<string>("UserId");
+
+                    b.HasIndex("UserId");
+
                     b.HasDiscriminator().HasValue("PendingOrder");
+                });
+
+            modelBuilder.Entity("FoodOrdering.Core.Entities.ExtendedIdentityUser", b =>
+                {
+                    b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
+
+                    b.HasDiscriminator().HasValue("ExtendedIdentityUser");
                 });
 
             modelBuilder.Entity("FoodOrdering.Core.Entities.Discount", b =>
@@ -225,19 +385,15 @@ namespace FoodOrdering.Migrations
                 {
                     b.HasOne("FoodOrdering.Core.Entities.FoodItem", "FoodItem")
                         .WithMany("Images")
-                        .HasForeignKey("FoodItemId");
+                        .HasForeignKey("FoodItemId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("FoodOrdering.Core.Entities.FoodItemCategory", b =>
+            modelBuilder.Entity("FoodOrdering.Core.Entities.FoodItem", b =>
                 {
-                    b.HasOne("FoodOrdering.Core.Entities.Category", "Category")
-                        .WithMany("Categories")
+                    b.HasOne("FoodOrdering.Core.Entities.Category", "Categories")
+                        .WithMany("FoodItems")
                         .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("FoodOrdering.Core.Entities.FoodItem", "FoodItem")
-                        .WithMany("Categories")
-                        .HasForeignKey("FoodItemId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
@@ -259,15 +415,62 @@ namespace FoodOrdering.Migrations
 
             modelBuilder.Entity("FoodOrdering.Core.Entities.Order", b =>
                 {
-                    b.HasOne("FoodOrdering.Core.Entities.Customer", "Customer")
-                        .WithMany("Orders")
-                        .HasForeignKey("CustomerId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
                     b.HasOne("FoodOrdering.Core.Entities.FoodItem", "FoodItem")
                         .WithMany("Orders")
                         .HasForeignKey("FoodItemId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole")
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole")
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("FoodOrdering.Core.Entities.PendingOrder", b =>
+                {
+                    b.HasOne("FoodOrdering.Core.Entities.ExtendedIdentityUser", "User")
+                        .WithMany("PendingOrder")
+                        .HasForeignKey("UserId");
                 });
 #pragma warning restore 612, 618
         }

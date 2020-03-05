@@ -10,5 +10,6 @@ namespace FoodOrdering.Core.Entities
         public string Url { get; set; }
         public string AlternativeText { get; set; }
         public FoodItem FoodItem { get; set; }
+        public int FoodItemId { get; set; }
     }
 }

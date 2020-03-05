@@ -17,6 +17,6 @@ namespace FoodOrdering.Core.Services
         void EditCategory(Category category);
         Category GetCategory(int id);
         Category GetCategoryByName(string name);
-
+        IList<Category> GetCategoryList();
     }
 }

@@ -12,6 +12,14 @@ namespace FoodOrdering.Core.Services
            string searchText,
            out int total,
            out int totalFiltered);
+        IEnumerable<FoodItem> GetProductByCategoryId(
+          int categoryid,
+          int pageIndex,
+          int pageSize,
+          string searchText,
+          out int total,
+          out int totalFiltered);
+        
         void AddNewFoodItem(FoodItem fooditem);
         void DeleteFoodItem(int id);
         void EditFoodItem(FoodItem fooditem);

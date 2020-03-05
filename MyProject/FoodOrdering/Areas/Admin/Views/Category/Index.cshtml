@@ -30,14 +30,19 @@
                             return `<input type='checkbox' value='${data}'/>`;
                         }
                     },
-                     {
+                    {
                         "orderable": false,
                         "targets": 2,
                         "render": function (data, type, row) {
-                            return `<button type="submit" class="btn btn-info btn-sm" onclick="window.location.href='/admin/category/edit/${data}'" value='${data}'>
+                            return `<button type="submit" class="btn btn-info btn-sm" onclick="window.location.href='/admin/Category/edit/${data}'" value='${data}'>
                                     <i class="fas fa-pencil-alt">
                                     </i>
-                                    Approve
+                                    edit
+                                </button>
+                                <button type="submit" class="btn btn-info btn-sm" onclick="window.location.href='/admin/category/PassId/${data}'" value='${data}'>
+                                    <i class="fas fa-pencil-alt">
+                                    </i>
+                                    Show Products
                                 </button>
                                 <button type="submit" class="btn btn-danger btn-sm show-bs-modal" href="#" data-id='${data}' value='${data}'>
                                     <i class="fas fa-trash">
@@ -46,6 +51,8 @@
                                 </button>`;
                         }
                     }
+                 
+                      
                 ]
             });
          });
@@ -87,6 +94,7 @@
                             <th><input type="checkbox" /></th>
                             <th>Name</th>
                             <th>Action</th>
+                            
                         </tr>
                     </thead>
                 </table>

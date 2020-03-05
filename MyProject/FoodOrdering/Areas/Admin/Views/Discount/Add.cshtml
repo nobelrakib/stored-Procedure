@@ -1,0 +1,61 @@
+﻿
+@model FoodOrdering.Areas.Admin.Models.DiscountUpdateModel
+@{
+    ViewData["Title"] = "Add fixed amount";
+}
+
+@section notification
+{
+    @await Html.PartialAsync("_Notification", Model.Notification)
+}
+<div class="container-fluid">
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-6">
+            <!-- general form elements -->
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Quick Example</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form role="form" action="~/admin/Discount/add" method="post">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="categoryname">Give amount</label>
+                            <input type="text" class="form-control" name="amount" id="categoryname" placeholder="fixed amount">
+
+                        </div>
+                        @*<div class="form-group">
+                                <label for="categoryname2">select products</label>
+
+                                @Html.ListBoxFor(model => model.FoodItemIds, new MultiSelectList(Model.FoodList, "Id", "Name"), new { id = "multiSelectDropDown", multiple = "multiple" })
+
+                            </div>*@
+                        <div class="form-group col-md-12">
+                            <label asp-for="DiscountName" class="control-label">Categories</label>
+                            <select name="DiscountName" class="form-control form-control-sm select2" style="width: 100%;">
+                                <option disabled selected> Please Select a new Item </option>
+                                @foreach (var item in Model.DiscountListName)
+                                {
+                                    <option value="@item">@item</option>
+                                }
+
+                            </select>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--/.col (left) -->
+
+    </div>
+    <!-- /.row -->
+</div><!-- /.container-fluid 
+
+

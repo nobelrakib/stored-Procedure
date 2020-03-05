@@ -7,6 +7,7 @@ namespace FoodOrdering.Core.Services
     public interface IPendingOrderService
     {
         void AddNewOrder(PendingOrder pendingdorder);
+        IList<PendingOrder> GetPendingOrderList();
         IEnumerable<PendingOrder> GetPendingOrders(
             int pageIndex,
             int pageSize,
@@ -16,5 +17,6 @@ namespace FoodOrdering.Core.Services
         void DeletePendingOrder(int id);
         void EditPendingOrder(PendingOrder pendingorder);
         PendingOrder GetPendingOrder(int id);
+        IList<PendingOrder> GetUserPendingOrderList(string userId);
     }
 }

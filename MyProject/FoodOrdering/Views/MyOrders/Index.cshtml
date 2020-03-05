@@ -1,0 +1,59 @@
+﻿@model IEnumerable<FoodOrdering.Models.OrderModel>
+@{
+    ViewData["Title"] = "Your Orders";
+}
+
+@section styles
+ {
+
+    <link rel="stylesheet" type="text/css" href="/css/simplepagelayout.css" />
+}
+
+
+<div id="container">
+    <div id="header">
+        <h1>Your Orders</h1>
+    </div>
+    <div id="content">
+        <div id="nav">
+            @*<ul>
+                    <li>home</li>
+                    <li>address</li>
+                    <li>menu</li>
+                </ul>*@
+            <p>here is your orders</p>
+            <p>Thank you for ordering</p>
+        </div>
+        <div id="main">
+            <h2>Your Orders</h2>
+
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    @*<div class="col-4" data-role="recipe" >*@
+                <div class="card">
+                    <img src="~/images/1.jpg" width="100%" alt=" " class="img-responsive" />
+                    <div class="card-body">
+                        <h5 class="card-title">@item.FoodName</h5>
+                        <p class="card-text">@item.Description</p>
+                        <p class="card-text">@item.Id</p>
+                    </div>
+                </div>
+                    @*</div>*@
+
+                }
+            </div>
+
+
+        </div>
+        <div id="thirdsection">
+            
+                <a class="nav-link text-green" asp-controller="Invoice" asp-action="Index">Invoice</a>
+            
+        </div>
+    </div>
+    <div id="footer">
+        <p></p>
+    </div>
+
+</div>

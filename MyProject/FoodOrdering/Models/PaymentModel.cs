@@ -37,50 +37,56 @@ namespace FoodOrdering.Models
             _paymentService = paymentService;
         }
 
-        public void AddNewPayment()
+        public void AddNewPayment(string userId)
         {
             try
             {
-                var order = GetOrder(this.OrderId);
-                if (CardNumber != null)
+                var order = GetOrder(userId);
+                foreach (var item in order)
                 {
-                    _paymentService.AddOnlinePayment(new OnlinePayment
+                    if (CardNumber != null)
                     {
-                        CardNumber=this.CardNumber,
-                        Order=order
-                    });
-                    Notification = new NotificationModel("Success!", "Payment successfuly created", NotificationType.Success);
-                }
-                else
-                {
-                    _paymentService.AddOfflinePayment(new OffLinePayment
+                        _paymentService.AddOnlinePayment(new OnlinePayment
+                        {
+                            CardNumber = this.CardNumber,
+                            Order = item
+                        });
+                        Notification = new NotificationModel("Success!", "Payment successfuly created", NotificationType.Success);
+                    }
+                    else
                     {
-                        Order = order
-                    });
-                    Notification = new NotificationModel("Success!", "Payment successfuly created", NotificationType.Success);
+                        _paymentService.AddOfflinePayment(new OffLinePayment
+                        {
+                            Order = item
+                        });
+                        Notification = new NotificationModel("Success!", "Payment successfuly created", NotificationType.Success);
+                    }
                 }
             }
             catch (InvalidOperationException iex)
             {
                 Notification = new NotificationModel(
-                    "Failed!",
-                    "Failed to pay, please provide again",
-                    NotificationType.Fail);
+                 "Failed!",
+                 "Failed to pay, please provide again",
+                 NotificationType.Fail);
             }
             catch (Exception ex)
             {
                 Notification = new NotificationModel(
-                    "Failed!",
-                    "Failed to Pay, please try again",
-                    NotificationType.Fail);
+                "Failed!",
+                "Failed to Pay, please try again",
+                NotificationType.Fail);
             }
         }
-        public Order GetOrder(int id)
+
+
+
+            public IList<PendingOrder> GetOrder(string userId)
         {
-          var pendingorder = _pendingorderService.GetPendingOrder(OrderId);
-          var confirmedOrder = _confirmedorderService.GetConfirmedOrder(OrderId);
-          if (pendingorder == null) return confirmedOrder;
-          else return pendingorder;
+          var pendingorder = _pendingorderService.GetUserPendingOrderList(userId);
+          //var confirmedOrder = _confirmedorderService.GetConfirmedOrder(OrderId);
+          //if (pendingorder == null) return confirmedOrder;
+          return pendingorder;
         }
     }
 }

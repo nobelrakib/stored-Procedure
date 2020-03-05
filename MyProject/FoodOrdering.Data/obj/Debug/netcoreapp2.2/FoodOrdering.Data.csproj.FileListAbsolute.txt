@@ -5,3 +5,4 @@ C:\Users\User\source\repos\MyProject\FoodOrdering.Data\obj\Debug\netcoreapp2.2\F
 C:\Users\User\source\repos\MyProject\FoodOrdering.Data\obj\Debug\netcoreapp2.2\FoodOrdering.Data.AssemblyInfo.cs
 C:\Users\User\source\repos\MyProject\FoodOrdering.Data\obj\Debug\netcoreapp2.2\FoodOrdering.Data.dll
 C:\Users\User\source\repos\MyProject\FoodOrdering.Data\obj\Debug\netcoreapp2.2\FoodOrdering.Data.pdb
+C:\Users\User\source\repos\MyProject\FoodOrdering.Data\obj\Debug\netcoreapp2.2\FoodOrdering.Data.csprojAssemblyReference.cache

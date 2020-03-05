@@ -35,7 +35,7 @@ namespace FoodOrdering.Core.Services
                 out totalFiltered,
                 x => x.Amount.ToString().Contains(searchText),
                 null,
-                "",
+                "FoodItem",
                 pageIndex,
                 pageSize,
                 true);

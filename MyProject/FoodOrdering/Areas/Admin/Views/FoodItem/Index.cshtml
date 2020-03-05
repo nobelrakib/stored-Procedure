@@ -39,6 +39,12 @@
                                     </i>
                                     edit
                                 </button>
+                                <button type="submit" class="btn btn-info btn-sm" onclick="window.location.href='/admin/fooditem/CallDiscount/${data}'" value='${data}'>
+                                    <i class="fas fa-pencil-alt">
+                                    </i>
+                                    Add Discount
+                                </button>
+                                
                                 <button type="submit" class="btn btn-danger btn-sm show-bs-modal" href="#" data-id='${data}' value='${data}'>
                                     <i class="fas fa-trash">
                                     </i>
@@ -46,6 +52,8 @@
                                 </button>`;
                         }
                     }
+                     
+     
                 ]
             });
          });
@@ -89,6 +97,7 @@
                             <th>description</th>
                             <th>price</th>
                             <th>Action</th>
+                            
                         </tr>
                     </thead>
                 </table>

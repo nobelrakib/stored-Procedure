@@ -4,25 +4,48 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using FoodOrdering.Models;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Identity;
+using FoodOrdering.Core.Entities;
+
 namespace FoodOrdering.Controllers
 {
     public class PendingOrderController : Controller
     {
+        private readonly UserManager<ExtendedIdentityUser> _userManager;
+
+        public PendingOrderController(UserManager<ExtendedIdentityUser> userManager)
+        {
+            _userManager = userManager;
+        }
+
         public IActionResult Index()
         {
             return View();
         }
         [Route("/PendingOrderController/AddPendingOrder",
          Name = "addorder")]
-        public IActionResult AddPendingOrder(int customerid,int fooditemid)
+        public IActionResult AddPendingOrder(int fooditemid)
         {
-            PendingOrderUpdateModel model = new PendingOrderUpdateModel()
+              var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (userId == null) RedirectToAction("Index");
+            else
             {
-                CustomerId = customerid,
-                FoodItemId = fooditemid
+                PendingOrderUpdateModel model1 = new PendingOrderUpdateModel()
+                {
+                    CustomerId = userId,
+                    FoodItemId = fooditemid
+                };
+                model1.AddNewOrder();
+                return View(model1);
+            }
+            PendingOrderUpdateModel model2 = new PendingOrderUpdateModel()
+            {
+                CustomerId = userId,
+                
             };
-            model.AddNewOrder();
-            return View(model);
+            return View(model2);
+            
         }
     }
 }

@@ -12,6 +12,7 @@ namespace FoodOrdering.Areas.Admin.Models
 {
     public class FixedAmountDiscountViewModel : BaseModel
     {
+        //public int Id { get; set; }
         private IFixedAmountDiscountService _fixedamountdiscountService;
 
         public FixedAmountDiscountViewModel()
@@ -43,8 +44,9 @@ namespace FoodOrdering.Areas.Admin.Models
                         select new string[]
                         {
                                 record.Id.ToString(),
-                                record.Amount.ToString()
-                                
+                                record.Amount.ToString(),
+                                record.FoodItem.Name,
+                                record.Id.ToString()
                         }
                     ).ToArray()
 

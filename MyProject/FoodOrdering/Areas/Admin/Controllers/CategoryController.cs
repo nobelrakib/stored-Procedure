@@ -32,6 +32,13 @@ namespace FoodOrdering.Areas.Admin.Controllers
             return View(model);
         }
 
+        public IActionResult PassId(int id)
+        {
+           FoodItemViewModel model = new FoodItemViewModel();
+            model.InitializeId(id);
+           return RedirectToAction("Index2", "FoodItem", new { area = "Admin", id = id });
+        }
+
         [HttpPost]
         //[ValidateAntiForgeryToken]
         public IActionResult Add(CategoryUpdateModel model)

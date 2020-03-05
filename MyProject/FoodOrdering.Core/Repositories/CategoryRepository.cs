@@ -18,6 +18,10 @@ namespace FoodOrdering.Core.Repositories
         {
             return _dbSet.Where(x => x.Name == name).FirstOrDefault();
         }
-        
+        public IList<Category> GetCategoryList()
+        {
+            return _dbSet.ToList();
+        }
+
     }
 }

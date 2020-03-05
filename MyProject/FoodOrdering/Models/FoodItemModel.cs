@@ -10,6 +10,7 @@ namespace FoodOrdering.Models
     public class FoodItemModel
     {
         public int Id { get; set; }
+        public string UserId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public double Price { get; set; }
@@ -38,6 +39,10 @@ namespace FoodOrdering.Models
                 fooditemmodellist.Add(singlefooditemmodel);
             }
             return fooditemmodellist;
+        }
+        public void InitiateUser(string id)
+        {
+            UserId = id;
         }
     }
 }

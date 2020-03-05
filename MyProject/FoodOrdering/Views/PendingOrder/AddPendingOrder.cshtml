@@ -2,7 +2,8 @@
 @{
     ViewData["Title"] = "Add Order";
 }
-
+@if (Model.CustomerId == null)
+{ <p>Log in At first to do this action</p>}
 @section notification
 {
     @await Html.PartialAsync("_Notification", Model.Notification)

@@ -56,5 +56,13 @@ namespace FoodOrdering.Core.Services
         {
             return _storeUnitOfWork.PendingOrderRepository.GetById(id);
         }
+        public IList<PendingOrder> GetPendingOrderList()
+        {
+            return _storeUnitOfWork.PendingOrderRepository.ListOfPendingOrder();
+        }
+        public IList<PendingOrder> GetUserPendingOrderList(string userId)
+        {
+            return _storeUnitOfWork.PendingOrderRepository.ListOfPendingOrder(userId);
+        }
     }
 }

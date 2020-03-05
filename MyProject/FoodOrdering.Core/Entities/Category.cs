@@ -8,6 +8,6 @@ namespace FoodOrdering.Core.Entities
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public IList<FoodItemCategory> Categories { get; set; }
+        public IList<FoodItem> FoodItems { get; set; }
     }
 }

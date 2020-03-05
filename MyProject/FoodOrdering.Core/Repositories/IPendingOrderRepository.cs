@@ -7,6 +7,7 @@ namespace FoodOrdering.Core.Repositories
 {
     public interface IPendingOrderRepository : IRepository<PendingOrder>
     {
-
+        IList<PendingOrder> ListOfPendingOrder();
+        IList<PendingOrder> ListOfPendingOrder(string userId);
     }
 }

@@ -8,6 +8,7 @@ using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using FoodOrdering.Models;
 using FoodOrdering.Core.Services;
+using System.Security.Claims;
 
 namespace FoodOrdering.Controllers
 {
@@ -19,16 +20,17 @@ namespace FoodOrdering.Controllers
         }
         public IActionResult AddPayment()
         {
+
             var model = new PaymentModel();
-            model.AddNewPayment();
             return View(model);
         }
         [HttpPost]
         public IActionResult AddPayment(PaymentModel model)
         {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (ModelState.IsValid) 
             {
-                model.AddNewPayment();
+                model.AddNewPayment(userId);
             }
             return View(model);
         }

@@ -18,17 +18,17 @@ namespace FoodOrdering.Areas.Admin.Controllers
     {
         private IPendingOrderService _pendingorderService;
         private IConfirmedOrderService _confirmorderService;
-        private ICustomerService _customerService;
+        
         private IFoodItemService _foodService;
         public PendingOrderController(IPendingOrderService pendingorderService,
             IConfirmedOrderService confirmedorder,
-            ICustomerService customerService,
+            
             IFoodItemService fooditem
             )
         {
             _pendingorderService = pendingorderService;
             _confirmorderService = confirmedorder;
-            _customerService = customerService;
+            
             _foodService = fooditem;
         }
         public IActionResult Index()
@@ -50,12 +50,12 @@ namespace FoodOrdering.Areas.Admin.Controllers
             try
             {
                 var pendingorder = _pendingorderService.GetPendingOrder(id);
-                var customer = _customerService.GetCustomer(pendingorder.CustomerId);
+                
                 var fooditem = _foodService.GetFoodItem(pendingorder.FoodItemId);
                 var confirmedorder = new ConfirmedOrder()
                 {
                     FoodItem = fooditem,
-                    Customer = customer
+                    
                 };
                 _pendingorderService.DeletePendingOrder(id);
                 _confirmorderService.AddNewOrder(confirmedorder);
@@ -68,7 +68,7 @@ namespace FoodOrdering.Areas.Admin.Controllers
             {
 
             }
-             return RedirectToAction("Index");
+             return RedirectToAction("Index","Email");
         }
     }
 }

@@ -25,11 +25,7 @@ C:\Users\User\source\repos\MyProject\FoodOrdering\obj\Debug\netcoreapp2.2\Razor\
 C:\Users\User\source\repos\MyProject\FoodOrdering\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Category\Index.cshtml.g.cs
 C:\Users\User\source\repos\MyProject\FoodOrdering\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\ConfirmedOrder\Index.cshtml.g.cs
 C:\Users\User\source\repos\MyProject\FoodOrdering\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Dashboard\Index.cshtml.g.cs
-C:\Users\User\source\repos\MyProject\FoodOrdering\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\FixedAmountDiscount\Add.cshtml.g.cs
-C:\Users\User\source\repos\MyProject\FoodOrdering\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\FixedAmountDiscount\Edit.cshtml.g.cs
 C:\Users\User\source\repos\MyProject\FoodOrdering\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\FixedAmountDiscount\Index.cshtml.g.cs
-C:\Users\User\source\repos\MyProject\FoodOrdering\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\FoodItemCategory\Add.cshtml.g.cs
-C:\Users\User\source\repos\MyProject\FoodOrdering\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\FoodItemCategory\Index.cshtml.g.cs
 C:\Users\User\source\repos\MyProject\FoodOrdering\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\FoodItem\Add.cshtml.g.cs
 C:\Users\User\source\repos\MyProject\FoodOrdering\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\FoodItem\Edit.cshtml.g.cs
 C:\Users\User\source\repos\MyProject\FoodOrdering\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\FoodItem\Index.cshtml.g.cs
@@ -64,3 +60,15 @@ C:\Users\User\source\repos\MyProject\FoodOrdering\obj\Debug\netcoreapp2.2\FoodOr
 C:\Users\User\source\repos\MyProject\FoodOrdering\obj\Debug\netcoreapp2.2\FoodOrdering.csproj.CopyComplete
 C:\Users\User\source\repos\MyProject\FoodOrdering\obj\Debug\netcoreapp2.2\FoodOrdering.dll
 C:\Users\User\source\repos\MyProject\FoodOrdering\obj\Debug\netcoreapp2.2\FoodOrdering.pdb
+C:\Users\User\source\repos\MyProject\FoodOrdering\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
+C:\Users\User\source\repos\MyProject\FoodOrdering\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\User\source\repos\MyProject\FoodOrdering\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+C:\Users\User\source\repos\MyProject\FoodOrdering\obj\Debug\netcoreapp2.2\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\User\source\repos\MyProject\FoodOrdering\obj\Debug\netcoreapp2.2\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\User\source\repos\MyProject\FoodOrdering\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\DeliveryBoy\Index.cshtml.g.cs
+C:\Users\User\source\repos\MyProject\FoodOrdering\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\DeliveryBoy\Edit.cshtml.g.cs
+C:\Users\User\source\repos\MyProject\FoodOrdering\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\DeliveryBoy\Add.cshtml.g.cs
+C:\Users\User\source\repos\MyProject\FoodOrdering\obj\Debug\netcoreapp2.2\Razor\Views\MyOrders\Index.cshtml.g.cs
+C:\Users\User\source\repos\MyProject\FoodOrdering\obj\Debug\netcoreapp2.2\Razor\Views\Invoice\Index.cshtml.g.cs
+C:\Users\User\source\repos\MyProject\FoodOrdering\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\FoodItem\Index2.cshtml.g.cs
+C:\Users\User\source\repos\MyProject\FoodOrdering\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Discount\Add.cshtml.g.cs

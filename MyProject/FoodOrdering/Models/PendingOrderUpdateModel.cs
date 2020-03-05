@@ -10,36 +10,36 @@ namespace FoodOrdering.Models
 { 
      public class PendingOrderUpdateModel : BaseModel
      { 
-        public int CustomerId { get; set; }
+        public String CustomerId { get; set; }
         public int FoodItemId { get; set; }
-        public Customer Customer { get; set; }
+        
         public FoodItem FoodItem { get; set; }
         private IPendingOrderService _pendingorderService;
         private IFoodItemService _fooditemService;
-        private ICustomerService _customerService;
+        
         public PendingOrderUpdateModel()
         {
             _pendingorderService = Startup.AutofacContainer.Resolve<IPendingOrderService>();
             _fooditemService= Startup.AutofacContainer.Resolve<IFoodItemService>();
-            _customerService= Startup.AutofacContainer.Resolve<ICustomerService>();
+            
         }
 
-        public PendingOrderUpdateModel(IPendingOrderService pendingOrderService,IFoodItemService foodItemService,ICustomerService customerService)
+        public PendingOrderUpdateModel(IPendingOrderService pendingOrderService,IFoodItemService foodItemService)
         {
             _pendingorderService= pendingOrderService;
             _fooditemService = foodItemService;
-            _customerService = customerService;
+            
         }
         public void AddNewOrder()
         {
             try
             {            
              FoodItem = _fooditemService.GetFoodItem(FoodItemId);
-             Customer = _customerService.GetCustomer(CustomerId);
+            // Customer = _customerService.GetCustomer(CustomerId);
             _pendingorderService.AddNewOrder(new PendingOrder
             {
                 FoodItem=FoodItem,
-                Customer=Customer
+                UserId=CustomerId
 
             });
 

@@ -64,6 +64,46 @@ namespace FoodOrdering.Data
                 return result?.ToList();
         }
 
+        //public virtual IEnumerable<T> Get(
+        //    int id,
+        //   out int total, out int totalDisplay,
+        //   Expression<Func<T, bool>> filter = null,
+        //   Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
+        //   string includeProperties = "", int pageIndex = 1, int pageSize = 10, bool isTrackingOff = false)
+        //{
+        //    var query = _dbSet.AsQueryable();
+        //    total = query.Count();
+        //    totalDisplay = total;
+
+        //    if (filter != null)
+        //    {
+        //        query = query.Where(filter);
+        //        totalDisplay = query.Count();
+        //    }
+
+        //    foreach (var includeProperty in includeProperties.Split
+        //        (new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+        //    {
+        //        query = query.Include(includeProperty);
+        //    }
+
+        //    IQueryable<T> result = null;
+
+        //    if (orderBy != null)
+        //    {
+        //        result = orderBy(query).Skip((pageIndex - 1) * pageSize).Take(pageSize);
+        //    }
+        //    else
+        //    {
+        //        result = query.Skip((pageIndex - 1) * pageSize).Take(pageSize);
+        //    }
+
+        //    if (isTrackingOff)
+        //        return result?.AsNoTracking().ToList();
+        //    else
+        //        return result?.Where(x=>x.)
+        //}
+
         public virtual IEnumerable<T> Get(Expression<Func<T, bool>> filter = null,
             Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
             string includeProperties = "", bool isTrackingOff = false)
