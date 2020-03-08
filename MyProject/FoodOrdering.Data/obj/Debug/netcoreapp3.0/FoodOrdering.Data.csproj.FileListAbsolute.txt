@@ -1,8 +1,0 @@
-C:\Users\User\source\repos\MyProject\FoodOrdering.Data\bin\Debug\netcoreapp3.0\FoodOrdering.Data.deps.json
-C:\Users\User\source\repos\MyProject\FoodOrdering.Data\bin\Debug\netcoreapp3.0\FoodOrdering.Data.dll
-C:\Users\User\source\repos\MyProject\FoodOrdering.Data\obj\Debug\netcoreapp3.0\FoodOrdering.Data.csprojAssemblyReference.cache
-C:\Users\User\source\repos\MyProject\FoodOrdering.Data\obj\Debug\netcoreapp3.0\FoodOrdering.Data.AssemblyInfoInputs.cache
-C:\Users\User\source\repos\MyProject\FoodOrdering.Data\obj\Debug\netcoreapp3.0\FoodOrdering.Data.AssemblyInfo.cs
-C:\Users\User\source\repos\MyProject\FoodOrdering.Data\bin\Debug\netcoreapp3.0\FoodOrdering.Data.pdb
-C:\Users\User\source\repos\MyProject\FoodOrdering.Data\obj\Debug\netcoreapp3.0\FoodOrdering.Data.dll
-C:\Users\User\source\repos\MyProject\FoodOrdering.Data\obj\Debug\netcoreapp3.0\FoodOrdering.Data.pdb
